@@ -1,0 +1,174 @@
+{
+  "courses": [
+    {
+      "course_id": "冒烟测试-faiss-qwen37-f168b9d5",
+      "name": "冒烟测试-FAISS-Qwen37",
+      "description": "faiss + qwen3.7",
+      "created_at": "2026-07-31T06:26:14Z",
+      "updated_at": "2026-08-03T05:55:18Z",
+      "documents": [
+        {
+          "doc_id": "c67304c4bfc6442c951bfa55fb1169d6",
+          "filename": "情境领导理论 Situational Leadership Theory-1784814547307.pptx",
+          "stored_path": "/Users/shanewang/Documents/个人/项目/多明尼克/dominican-agent/data/courses/冒烟测试-faiss-qwen37-f168b9d5/raw/情境领导理论 Situational Leadership Theory-1784814547307.pptx",
+          "chunk_count": 29,
+          "created_at": "2026-08-03T05:55:18Z",
+          "updated_at": "2026-08-03T05:55:18Z"
+        }
+      ]
+    },
+    {
+      "course_id": "组织绩效的战略领导力-e55845c3",
+      "name": "组织绩效的战略领导力",
+      "description": "",
+      "created_at": "2026-08-03T05:48:02Z",
+      "updated_at": "2026-08-03T06:09:13Z",
+      "documents": [
+        {
+          "doc_id": "1b9359b1b1c743c9a4d81964369b2e55",
+          "filename": "Case Study_ The Stellar Candidate  案例研究：明星候选人  W1 CASE Leadership Styles-1784814444804.docx",
+          "stored_path": "/Users/shanewang/Documents/个人/项目/多明尼克/dominican-agent/data/courses/组织绩效的战略领导力-e55845c3/raw/Case Study_ The Stellar Candidate  案例研究：明星候选人  W1 CASE Leadership Styles-1784814444804.docx",
+          "chunk_count": 30,
+          "created_at": "2026-08-03T06:08:23Z",
+          "updated_at": "2026-08-03T06:08:23Z"
+        },
+        {
+          "doc_id": "0972a855f71348deaddb04c0ea1fec87",
+          "filename": "Case Study_ The Stellar Candidate  案例研究：明星候选人  W1 CASE Leadership Styles.docx",
+          "stored_path": "/Users/shanewang/Documents/个人/项目/多明尼克/dominican-agent/data/courses/组织绩效的战略领导力-e55845c3/raw/Case Study_ The Stellar Candidate  案例研究：明星候选人  W1 CASE Leadership Styles.docx",
+          "chunk_count": 30,
+          "created_at": "2026-08-03T06:08:26Z",
+          "updated_at": "2026-08-03T06:08:26Z"
+        },
+        {
+          "doc_id": "5b152004df064f58b50a6e3565713eb5",
+          "filename": "MBAO5404 W1 Live Session Slides 直播课课件-1784814458304.pptx",
+          "stored_path": "/Users/shanewang/Documents/个人/项目/多明尼克/dominican-agent/data/courses/组织绩效的战略领导力-e55845c3/raw/MBAO5404 W1 Live Session Slides 直播课课件-1784814458304.pptx",
+          "chunk_count": 27,
+          "created_at": "2026-08-03T06:08:28Z",
+          "updated_at": "2026-08-03T06:08:28Z"
+        },
+        {
+          "doc_id": "2ee290d4d67d40d7ac7e65b62fc9a867",
+          "filename": "MBAO5404 第三周案例-说服-1785736300690.docx",
+          "stored_path": "/Users/shanewang/Documents/个人/项目/多明尼克/dominican-agent/data/courses/组织绩效的战略领导力-e55845c3/raw/MBAO5404 第三周案例-说服-1785736300690.docx",
+          "chunk_count": 20,
+          "created_at": "2026-08-03T06:08:31Z",
+          "updated_at": "2026-08-03T06:08:31Z"
+        },
+        {
+          "doc_id": "346bad57e8414b7aa8a7d94f7987ac53",
+          "filename": "MBAO5404 第二周案例-健康-1785312683887.docx",
+          "stored_path": "/Users/shanewang/Documents/个人/项目/多明尼克/dominican-agent/data/courses/组织绩效的战略领导力-e55845c3/raw/MBAO5404 第二周案例-健康-1785312683887.docx",
+          "chunk_count": 13,
+          "created_at": "2026-08-03T06:08:32Z",
+          "updated_at": "2026-08-03T06:08:32Z"
+        },
+        {
+          "doc_id": "990fa481e1954a39953df4769de66eb9",
+          "filename": "MBAO5404 组织绩效的战略领导力-第三周学习课件-1785736238824.pptx",
+          "stored_path": "/Users/shanewang/Documents/个人/项目/多明尼克/dominican-agent/data/courses/组织绩效的战略领导力-e55845c3/raw/MBAO5404 组织绩效的战略领导力-第三周学习课件-1785736238824.pptx",
+          "chunk_count": 33,
+          "created_at": "2026-08-03T06:08:36Z",
+          "updated_at": "2026-08-03T06:08:36Z"
+        },
+        {
+          "doc_id": "07196f23a77b4f08977a4e976605a5e4",
+          "filename": "MBAO5404 组织绩效的战略领导力-第二周学习课件-1785311927429.pptx",
+          "stored_path": "/Users/shanewang/Documents/个人/项目/多明尼克/dominican-agent/data/courses/组织绩效的战略领导力-e55845c3/raw/MBAO5404 组织绩效的战略领导力-第二周学习课件-1785311927429.pptx",
+          "chunk_count": 24,
+          "created_at": "2026-08-03T06:08:38Z",
+          "updated_at": "2026-08-03T06:08:38Z"
+        },
+        {
+          "doc_id": "a52cb58ccaab4a848984520b76dc86de",
+          "filename": "什么是情绪，它们源自何处？ What are emotions and where do they come from-1785313594018.pptx",
+          "stored_path": "/Users/shanewang/Documents/个人/项目/多明尼克/dominican-agent/data/courses/组织绩效的战略领导力-e55845c3/raw/什么是情绪，它们源自何处？ What are emotions and where do they come from-1785313594018.pptx",
+          "chunk_count": 42,
+          "created_at": "2026-08-03T06:08:42Z",
+          "updated_at": "2026-08-03T06:08:42Z"
+        },
+        {
+          "doc_id": "1b6cac3f229b4f09a2469dae94520631",
+          "filename": "倾听以理解 Listening to understand-1785736275990.pptx",
+          "stored_path": "/Users/shanewang/Documents/个人/项目/多明尼克/dominican-agent/data/courses/组织绩效的战略领导力-e55845c3/raw/倾听以理解 Listening to understand-1785736275990.pptx",
+          "chunk_count": 25,
+          "created_at": "2026-08-03T06:08:44Z",
+          "updated_at": "2026-08-03T06:08:44Z"
+        },
+        {
+          "doc_id": "2865350ce05a4e09a72cacbe41bbd407",
+          "filename": "情境领导理论 Situational Leadership Theory-1784814547307.pptx",
+          "stored_path": "/Users/shanewang/Documents/个人/项目/多明尼克/dominican-agent/data/courses/组织绩效的战略领导力-e55845c3/raw/情境领导理论 Situational Leadership Theory-1784814547307.pptx",
+          "chunk_count": 29,
+          "created_at": "2026-08-03T06:08:47Z",
+          "updated_at": "2026-08-03T06:08:47Z"
+        },
+        {
+          "doc_id": "be067d879e4f45a88eda769408816b54",
+          "filename": "我们如何以健康的方式处理自己的情绪？（1 ）  How do we handle our emotions in a healthy way-1782099080665.pptx",
+          "stored_path": "/Users/shanewang/Documents/个人/项目/多明尼克/dominican-agent/data/courses/组织绩效的战略领导力-e55845c3/raw/我们如何以健康的方式处理自己的情绪？（1 ）  How do we handle our emotions in a healthy way-1782099080665.pptx",
+          "chunk_count": 24,
+          "created_at": "2026-08-03T06:08:50Z",
+          "updated_at": "2026-08-03T06:08:50Z"
+        },
+        {
+          "doc_id": "4b5b1cac7606468ba70d2aa6f8d3aa6c",
+          "filename": "我们如何以健康的方式处理自己的情绪？（2 ）  How do we handle our emotions in a healthy way-1782100370955.pptx",
+          "stored_path": "/Users/shanewang/Documents/个人/项目/多明尼克/dominican-agent/data/courses/组织绩效的战略领导力-e55845c3/raw/我们如何以健康的方式处理自己的情绪？（2 ）  How do we handle our emotions in a healthy way-1782100370955.pptx",
+          "chunk_count": 33,
+          "created_at": "2026-08-03T06:08:53Z",
+          "updated_at": "2026-08-03T06:08:53Z"
+        },
+        {
+          "doc_id": "d233661c66cc46538ef4d2ac78d424a9",
+          "filename": "我们如何培养自我意识？ How do we develop self-awareness-1785313318266.pptx",
+          "stored_path": "/Users/shanewang/Documents/个人/项目/多明尼克/dominican-agent/data/courses/组织绩效的战略领导力-e55845c3/raw/我们如何培养自我意识？ How do we develop self-awareness-1785313318266.pptx",
+          "chunk_count": 38,
+          "created_at": "2026-08-03T06:08:56Z",
+          "updated_at": "2026-08-03T06:08:56Z"
+        },
+        {
+          "doc_id": "b82333027b8b4e6db4b2ec343306bec7",
+          "filename": "我们如何管理与他人的关系？ How do we manage our relationships with others-1785736224287.pptx",
+          "stored_path": "/Users/shanewang/Documents/个人/项目/多明尼克/dominican-agent/data/courses/组织绩效的战略领导力-e55845c3/raw/我们如何管理与他人的关系？ How do we manage our relationships with others-1785736224287.pptx",
+          "chunk_count": 35,
+          "created_at": "2026-08-03T06:09:00Z",
+          "updated_at": "2026-08-03T06:09:00Z"
+        },
+        {
+          "doc_id": "78ecb0166d544fa49233c32b6c0cd320",
+          "filename": "我们的思想如何影响我们的情绪？  How do our thoughts influence our emotions-1785314016064.pptx",
+          "stored_path": "/Users/shanewang/Documents/个人/项目/多明尼克/dominican-agent/data/courses/组织绩效的战略领导力-e55845c3/raw/我们的思想如何影响我们的情绪？  How do our thoughts influence our emotions-1785314016064.pptx",
+          "chunk_count": 27,
+          "created_at": "2026-08-03T06:09:02Z",
+          "updated_at": "2026-08-03T06:09:02Z"
+        },
+        {
+          "doc_id": "a46eb4861d8b4c34b2a03a4ee55d0a1b",
+          "filename": "社会意识 Social Awareness-1785736247270.pptx",
+          "stored_path": "/Users/shanewang/Documents/个人/项目/多明尼克/dominican-agent/data/courses/组织绩效的战略领导力-e55845c3/raw/社会意识 Social Awareness-1785736247270.pptx",
+          "chunk_count": 31,
+          "created_at": "2026-08-03T06:09:05Z",
+          "updated_at": "2026-08-03T06:09:05Z"
+        },
+        {
+          "doc_id": "b56672c37e164ccda728cae514448f65",
+          "filename": "言语说服 Verbal persuasion-1785736289011.pptx",
+          "stored_path": "/Users/shanewang/Documents/个人/项目/多明尼克/dominican-agent/data/courses/组织绩效的战略领导力-e55845c3/raw/言语说服 Verbal persuasion-1785736289011.pptx",
+          "chunk_count": 73,
+          "created_at": "2026-08-03T06:09:11Z",
+          "updated_at": "2026-08-03T06:09:11Z"
+        },
+        {
+          "doc_id": "645955007b554b4184089065348a4333",
+          "filename": "认知共情（观点采择） Cognitive empathy （Perspective taking)-1785736256348.pptx",
+          "stored_path": "/Users/shanewang/Documents/个人/项目/多明尼克/dominican-agent/data/courses/组织绩效的战略领导力-e55845c3/raw/认知共情（观点采择） Cognitive empathy （Perspective taking)-1785736256348.pptx",
+          "chunk_count": 23,
+          "created_at": "2026-08-03T06:09:13Z",
+          "updated_at": "2026-08-03T06:09:13Z"
+        }
+      ]
+    }
+  ]
+}

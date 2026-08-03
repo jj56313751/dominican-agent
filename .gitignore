@@ -1,0 +1,10 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+data/courses/*/
+!data/courses/.gitkeep
+*.log
+.chroma/
