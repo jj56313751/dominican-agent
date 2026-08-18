@@ -43,36 +43,52 @@ retrieval_mode = st.radio(
     horizontal=True,
 )
 
-question = st.text_area("输入问题", placeholder="例如：什么是情境领导理论？", height=100)
-
-if st.button("生成答案", type="primary", disabled=not question.strip()):
-    try:
-        with st.spinner(f"检索（{retrieval_mode}）并调用 {LLM_MODEL}…"):
-            service = AnswerService(registry=registry)
-            result = service.answer(
-                course_id=course_id,
-                question=question,
-                top_k=top_k,
-                expand_parent=expand_parent,
-                retrieval_mode=retrieval_mode,
-            )
-        st.subheader("答案")
-        st.markdown(result.answer)
-        st.caption(
-            f"Embedding：{EMBEDDING_MODEL} · LLM：{result.model} · 检索：{result.retrieval_mode}"
+# 问题输入与提交按钮横排；表单内 Ctrl/Cmd+Enter 可提交（回车本身用于换行）
+with st.form("course_qa_form", border=False, enter_to_submit=True):
+    with st.container(horizontal=True, vertical_alignment="bottom"):
+        question = st.text_area(
+            "输入问题",
+            placeholder="例如：什么是情境领导理论？",
+            height=100,
+        )
+        submitted = st.form_submit_button(
+            "生成答案",
+            type="primary",
+            help="在输入框中按 Ctrl+Enter（Mac 为 Cmd+Enter）也可生成答案",
         )
 
-        st.subheader("引用")
-        if not result.references:
-            st.write("无引用")
-        else:
-            for i, ref in enumerate(result.references, start=1):
-                with st.expander(
-                    f"[{i}] {ref['filename']} · 第{ref['page']}页/幻灯片 · score={ref['score']}"
-                ):
-                    st.write(ref.get("snippet", ""))
+if submitted:
+    if not (question or "").strip():
+        st.warning("请输入问题。")
+    else:
+        try:
+            with st.spinner(f"检索（{retrieval_mode}）并调用 {LLM_MODEL}…"):
+                service = AnswerService(registry=registry)
+                result = service.answer(
+                    course_id=course_id,
+                    question=question,
+                    top_k=top_k,
+                    expand_parent=expand_parent,
+                    retrieval_mode=retrieval_mode,
+                )
+            with st.container(border=True):
+                st.subheader("答案")
+                st.markdown(result.answer)
+                st.caption(
+                    f"Embedding：{EMBEDDING_MODEL} · LLM：{result.model} · 检索：{result.retrieval_mode}"
+                )
 
-        with st.expander("查看检索上下文"):
-            st.text(result.context_text)
-    except Exception as exc:
-        st.error(str(exc))
+            st.subheader("引用")
+            if not result.references:
+                st.write("无引用")
+            else:
+                for i, ref in enumerate(result.references, start=1):
+                    with st.expander(
+                        f"[{i}] {ref['filename']} · 第{ref['page']}页/幻灯片 · score={ref['score']}"
+                    ):
+                        st.write(ref.get("snippet", ""))
+
+            with st.expander("查看检索上下文"):
+                st.text(result.context_text)
+        except Exception as exc:
+            st.error(str(exc))
