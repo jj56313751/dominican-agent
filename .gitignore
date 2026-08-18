@@ -5,6 +5,7 @@ __pycache__/
 *.pyc
 .DS_Store
 data/courses/*/
+data/courses/registry.json
 !data/courses/.gitkeep
 *.log
 .chroma/
