@@ -78,6 +78,11 @@ with tab_sample:
     known_dirs = list_subdirectories(SAMPLE_COURSE_ROOT)
     known_labels = {p.name: str(p) for p in known_dirs}
 
+    # 浏览目录后不能在本轮改 sample_quick_dir（控件已实例化），
+    # 标记放到下一轮 rerun、selectbox 创建之前再重置。
+    if st.session_state.pop("_reset_sample_quick_dir", False):
+        st.session_state["sample_quick_dir"] = "（从下方浏览选择）"
+
     col_quick, col_browse = st.columns([3, 1])
     with col_quick:
         quick_options = ["（从下方浏览选择）"] + list(known_labels.keys())
@@ -109,7 +114,7 @@ with tab_sample:
                 chosen = None
             if chosen:
                 st.session_state["sample_source_dir"] = chosen
-                st.session_state["sample_quick_dir"] = "（从下方浏览选择）"
+                st.session_state["_reset_sample_quick_dir"] = True
                 st.rerun()
             else:
                 st.info("未选择目录（已取消）")
