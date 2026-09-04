@@ -16,6 +16,18 @@ class PageUnit:
     text: str
 
 
+def _sanitize_text(text: str) -> str:
+    """清洗非法 Unicode 代理项，保证文本可按 UTF-8 编码。
+
+    PDF/PPT 抽取偶发会留下不成对的 UTF-16 代理项（如 \\ud83e），
+    直接 json.dumps 或 write_text(encoding='utf-8') 会报 surrogates not allowed。
+    先按 UTF-16 还原成对代理项，再丢弃仍不成对的码位。
+    """
+    if not text:
+        return text
+    return text.encode("utf-16", "surrogatepass").decode("utf-16", "ignore")
+
+
 def parse_file(path: Path) -> List[PageUnit]:
     """按扩展名解析文件，返回非空页/幻灯片列表。"""
     path = Path(path)
@@ -34,6 +46,7 @@ def parse_file(path: Path) -> List[PageUnit]:
         units = _parse_plain(path)
     else:
         raise ValueError(f"不支持的文件类型: {suffix}")
+    units = [PageUnit(page=u.page, text=_sanitize_text(u.text)) for u in units]
     units = [u for u in units if u.text.strip()]
     if not units:
         raise ValueError(f"未能从文件中提取到有效文本: {path.name}")
