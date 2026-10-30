@@ -3,4 +3,4 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 export PYTHONPATH="$(pwd)${PYTHONPATH:+:$PYTHONPATH}"
-streamlit run app.py
+exec .venv/bin/streamlit run app.py
