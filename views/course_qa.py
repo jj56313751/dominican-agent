@@ -62,7 +62,9 @@ if submitted:
         st.warning("请输入问题。")
     else:
         try:
-            with st.spinner(f"检索（{retrieval_mode}）并调用 {LLM_MODEL}…"):
+            with st.spinner(
+                f"检索课件（{retrieval_mode}）并调用 {LLM_MODEL}，课件不足时将联网搜索…"
+            ):
                 service = AnswerService(registry=registry)
                 result = service.answer(
                     course_id=course_id,
@@ -74,13 +76,36 @@ if submitted:
             with st.container(border=True):
                 st.subheader("答案")
                 st.markdown(result.answer)
+                source_label = "课件" if result.answer_source == "courseware" else "联网"
                 st.caption(
-                    f"Embedding：{EMBEDDING_MODEL} · LLM：{result.model} · 检索：{result.retrieval_mode}"
+                    f"Embedding：{EMBEDDING_MODEL} · LLM：{result.model} · "
+                    f"检索：{result.retrieval_mode} · 回答来源：{source_label}"
                 )
 
-            st.subheader("引用")
+            if result.answer_source == "web":
+                st.subheader("联网来源")
+                if not result.web_references:
+                    st.write("无联网来源")
+                else:
+                    for ref in result.web_references:
+                        index = ref.get("index")
+                        title = ref.get("title") or "未命名来源"
+                        site_name = ref.get("site_name") or ""
+                        url = ref.get("url") or ""
+                        head = f"[{index}] {title}" if index not in (None, "") else title
+                        if site_name:
+                            head = f"{head} · {site_name}"
+                        with st.expander(head):
+                            if url:
+                                st.markdown(f"[{url}]({url})")
+                            else:
+                                st.write("无链接")
+
+            st.subheader("课件引用")
+            if result.answer_source == "web" and result.references:
+                st.caption("以下为课件检索结果，本次答案未采用。")
             if not result.references:
-                st.write("无引用")
+                st.write("无课件引用")
             else:
                 for i, ref in enumerate(result.references, start=1):
                     with st.expander(
